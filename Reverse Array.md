@@ -48,9 +48,49 @@ arr = [1]
 - **Expected Time Complexity:** O(n)
 - **Expected Auxiliary Space Complexity:** O(1)
 
-### Accepted Solutions (2)
+### Accepted Solutions (3)
 
 #### Solution 1 (Python)
+
+- **Submitted:** 2026-11-07 20:13:55
+- **Status:** Correct
+- **Marks:** 0
+
+```python
+##  approach 1 -- by inbuilt method
+# class Solution:
+#     def reverseArray(self, arr):
+#         return arr.reverse()
+        
+    
+# # approach 2 -- using swapping
+class Solution:
+    def reverseArray(self,arr):
+        left = 0
+        right = len(arr) -1
+        
+        while left < right:
+            arr[left] , arr[right] = arr[right] , arr[left]
+            left += 1
+            right -=1
+        return arr
+        
+# # approach 3 -- using temp for swap value    
+# class Solution:
+#     def reverseArray(self,arr):
+#         left = 0
+#         right = len(arr) -1
+        
+#         while left < right:
+#             temp = arr[left]
+#             arr[left] = arr[right]
+#             arr[right] = temp
+#             left += 1
+#             right -=1
+#         return arr
+```
+
+#### Solution 2 (Python)
 
 - **Submitted:** 2026-11-06 22:06:19
 - **Status:** Correct
@@ -89,7 +129,7 @@ class Solution:
         return arr
 ```
 
-#### Solution 2 (Python)
+#### Solution 3 (Python)
 
 - **Submitted:** 2026-11-03 17:39:05
 - **Status:** Correct
@@ -114,4 +154,4 @@ class Solution:
         return arr
 ```
 
-*Generated on: 11/6/2026, 10:06:42 PM*
+*Generated on: 11/7/2026, 8:15:01 PM*
