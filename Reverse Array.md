@@ -20,9 +20,29 @@ The problem can be found at the following link: [Question Link](https://www.geek
 - **Expected Time Complexity:** O(n)
 - **Expected Auxiliary Space Complexity:** O(1)
 
-### Accepted Solutions (4)
+### Accepted Solutions (5)
 
 #### Solution 1 (Python)
+
+- **Submitted:** 2026-11-12 20:56:22
+- **Status:** Correct
+- **Marks:** 0
+
+```python
+class Solution:
+    def reverseArray(self, arr):
+        left = 0
+        right = len(arr) - 1
+
+        while left < right:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+            right -= 1
+
+        return arr
+```
+
+#### Solution 2 (Python)
 
 - **Submitted:** 2026-11-12 20:53:29
 - **Status:** Correct
@@ -42,7 +62,7 @@ class Solution:
         return arr
 ```
 
-#### Solution 2 (Python)
+#### Solution 3 (Python)
 
 - **Submitted:** 2026-11-07 20:13:55
 - **Status:** Correct
@@ -82,7 +102,7 @@ class Solution:
 #         return arr
 ```
 
-#### Solution 3 (Python)
+#### Solution 4 (Python)
 
 - **Submitted:** 2026-11-06 22:06:19
 - **Status:** Correct
@@ -121,7 +141,7 @@ class Solution:
         return arr
 ```
 
-#### Solution 4 (Python)
+#### Solution 5 (Python)
 
 - **Submitted:** 2026-11-03 17:39:05
 - **Status:** Correct
@@ -146,4 +166,4 @@ class Solution:
         return arr
 ```
 
-*Generated on: 11/12/2026, 8:54:26 PM*
+*Generated on: 11/12/2026, 8:56:42 PM*
