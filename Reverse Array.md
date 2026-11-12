@@ -4,40 +4,12 @@ The problem can be found at the following link: [Question Link](https://www.geek
 
 ### Problem Description
 
-**Task:** You are given an array of integers arr[]. You have to reverse the given array.
-
-> **Note:** Modify the array in place.
+**Task:** Given an array of integers arr[], reverse the array in place.Examples:Input: arr = [1, 4, 3, 2, 6, 5]
 
 #### Examples
 
 ##### Example 1
 
-- **Input:**
-```text
-arr = [1, 4, 3, 2, 6, 5]
-```
-- **Output:**
-```text
-[5, 6, 2, 3, 4, 1]Explanation: The elements of the array are [1, 4, 3, 2, 6, 5]. After reversing the array, the first element goes to the last position, the second element goes to the second last position and so on. Hence, the answer is [5, 6, 2, 3, 4, 1].
-```
-
-##### Example 2
-
-- **Input:**
-```text
-arr = [4, 5, 2]
-```
-- **Output:**
-```text
-[2, 5, 4]Explanation: The elements of the array are [4, 5, 2]. The reversed array will be [2, 5, 4].
-```
-
-##### Example 3
-
-- **Input:**
-```text
-arr = [1]
-```
 - **Output:**
 ```text
 [1]Explanation: The array has only single element, hence the reversed array is same as the original.
@@ -48,9 +20,29 @@ arr = [1]
 - **Expected Time Complexity:** O(n)
 - **Expected Auxiliary Space Complexity:** O(1)
 
-### Accepted Solutions (3)
+### Accepted Solutions (4)
 
 #### Solution 1 (Python)
+
+- **Submitted:** 2026-11-12 20:53:29
+- **Status:** Correct
+- **Marks:** 0
+
+```python
+class Solution:
+    def reverseArray(self, arr):
+        left = 0
+        right = len(arr) - 1
+
+        while left < right:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+            right -= 1
+
+        return arr
+```
+
+#### Solution 2 (Python)
 
 - **Submitted:** 2026-11-07 20:13:55
 - **Status:** Correct
@@ -90,7 +82,7 @@ class Solution:
 #         return arr
 ```
 
-#### Solution 2 (Python)
+#### Solution 3 (Python)
 
 - **Submitted:** 2026-11-06 22:06:19
 - **Status:** Correct
@@ -129,7 +121,7 @@ class Solution:
         return arr
 ```
 
-#### Solution 3 (Python)
+#### Solution 4 (Python)
 
 - **Submitted:** 2026-11-03 17:39:05
 - **Status:** Correct
@@ -154,4 +146,4 @@ class Solution:
         return arr
 ```
 
-*Generated on: 11/7/2026, 8:15:01 PM*
+*Generated on: 11/12/2026, 8:54:26 PM*
